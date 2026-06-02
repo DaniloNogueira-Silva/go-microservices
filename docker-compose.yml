@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: microservices_db
+    ports:
+      - "5432:5432"
+
+  localstack:
+    image: localstack/localstack:latest
+    ports:
+      - "4566:4566"            # Porta padrão da AWS API
+    environment:
+      - SERVICES=sqs           # Habilita apenas o SQS
+      - AWS_DEFAULT_REGION=us-east-1
+      - EDGE_PORT=4566
+    volumes:
+      - "./init-aws.sh:/etc/localstack/init/ready.d/init-aws.sh" # Script de inicialização
