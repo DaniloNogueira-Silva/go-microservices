@@ -9,7 +9,8 @@ services:
       - "5432:5432"
 
   localstack:
-    image: localstack/localstack:latest
+    image: localstack/localstack:3.4.0
+    restart: unless-stopped
     ports:
       - "4566:4566"            # Porta padrão da AWS API
     environment:
