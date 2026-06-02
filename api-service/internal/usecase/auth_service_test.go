@@ -6,8 +6,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/seunome/go-microservices/api-service/internal/domain"
-	"github.com/seunome/go-microservices/api-service/internal/usecase"
+	"github.com/DaniloNogueira-Silva/go-microservices/api-service/internal/domain"
+	"github.com/DaniloNogueira-Silva/go-microservices/api-service/internal/usecase"
 )
 
 // Mock do Repositório

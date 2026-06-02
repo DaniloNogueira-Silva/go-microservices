@@ -3,7 +3,7 @@ package database
 import (
 	"context"
 
-	"github.com/seunome/go-microservices/api-service/internal/domain"
+	"github.com/DaniloNogueira-Silva/go-microservices/api-service/internal/domain"
 	"gorm.io/gorm"
 )
 
